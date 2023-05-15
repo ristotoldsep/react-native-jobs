@@ -4,15 +4,15 @@
 
 ### Home view
 
-![Screenshot 1](screenshots/home.png)
+![Screenshot 1](screenshots/home.jpg)
 
 ### Search page view
 
-![Screenshot 2](screenshots/searchpage.png)
+![Screenshot 2](screenshots/searchpage.jpg)
 
 ### Job detail page
 
-![Screenshot 2](screenshots/jobdetails.png)
+![Screenshot 2](screenshots/jobdetails.jpg)
 
 ## Expo Router Example
 
