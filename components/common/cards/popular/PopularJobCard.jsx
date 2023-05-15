@@ -1,16 +1,22 @@
-import React from 'react'
 import { View, Text, TouchableOpacity, Image } from 'react-native'
 
-import styles from './popularjobcard.style'
+import styles from './popularjobcard.style';
 
-const  PopularJobCard = ({ item, selectedJob, handleCardPress }) => {
+import { checkImageURL } from '../../../../utils';
+
+const PopularJobCard = ({ item, selectedJob, handleCardPress }) => {
   return (
-    <TouchableOpacity style={styles.container(selectedJob, item)}
+    <TouchableOpacity 
+      style={styles.container(selectedJob, item)}
       onPress={() => handleCardPress(item)}  
     >
       <TouchableOpacity style={styles.logoContainer(selectedJob, item)}>
         <Image 
-          source={{ uri: item.employer_logo }}
+          source={{ 
+            uri: checkImageURL(item.employer_logo) 
+            ? item.employer_logo 
+            : 'https://www.adaptivewfs.com/wp-content/uploads/2020/07/logo-placeholder-image.png' 
+          }}
           resizeMode="contain"
           style={styles.logoImage}
         />
@@ -21,6 +27,16 @@ const  PopularJobCard = ({ item, selectedJob, handleCardPress }) => {
 
       <View style={styles.infoContainer}>
         <Text style={styles.jobName(selectedJob, item)} numberOfLines={1}>{item.job_title}</Text>
+        
+        <View style={styles.infoWrapper}>
+          <Text style={styles.publisher(selectedJob, item)}>
+            {item.job_publisher} -
+          </Text>
+          <Text style={styles.location}> {item.job_country}, {item.job_city}</Text>
+        </View>
+        
+        
+        
       </View>
 
     </TouchableOpacity>
