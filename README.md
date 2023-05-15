@@ -1,5 +1,26 @@
 # React Native (mobile) application for finding job ads.
 
+<div style="display:flex;justify-content:center;align-items:center;">
+    <div>
+        <h4 align="center">Screenshot 1</h4>
+        <p align="center">
+            <img src="screenshots/home.jpg" alt="Screenshot 1">
+        </p>
+    </div>
+    <div>
+        <h4 align="center">Screenshot 2</h4>
+        <p align="center">
+            <img src="screenshots/searchpage.jpg" alt="Screenshot 2">
+        </p>
+    </div>
+    <div>
+        <h4 align="center">Screenshot 3</h4>
+        <p align="center">
+            <img src="screenshots/jobdetailpage.jpg" alt="Screenshot 3">
+        </p>
+    </div>
+</div>
+
 ## Screenshots
 
 ### Home view
@@ -12,7 +33,7 @@
 
 ### Job detail page
 
-![Screenshot 2](screenshots/jobdetails.jpg)
+![Screenshot 2](screenshots/jobdetailpage.jpg)
 
 ## Expo Router Example
 
