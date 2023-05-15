@@ -30,9 +30,9 @@ const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
           <TextInput
             style={styles.searchInput}
             value={searchTerm}
-            onChange={(text) => {setSearchTerm(text)}}
+            onChangeText={(text) => {setSearchTerm(text)}}
             placeholder="What are you looking for?"
-            placeholderTextColor={'#18181855'}
+            placeholderTextColor={'#181818'}
           />
         </View>
 

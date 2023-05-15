@@ -12,7 +12,7 @@ const Popularjobs = () => {
   // const isLoading = false;
   // const error = false;
 
-  const { data, isLoading, error } = useFetch('search', {query: 'Developer in Tallinn', num_pages: 1})
+  const { data, isLoading, error } = useFetch('search', {query: 'front-End Developer in Tallinn', num_pages: 1})
 
   // console.log(data);
 

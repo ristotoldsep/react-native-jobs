@@ -30,10 +30,10 @@ const styles = StyleSheet.create({
     paginationButton: {
         width: 30,
         height: 30,
-        borderRadius: 5,
+        borderRadius: 35,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: COLORS.tertiary
+        backgroundColor: COLORS.violet
     },
     paginationImage: {
         width: '60%',
