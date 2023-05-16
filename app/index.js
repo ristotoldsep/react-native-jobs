@@ -6,10 +6,25 @@ import { Stack, useRouter } from 'expo-router';
 import { COLORS, icons, images, SIZES } from '../constants';
 import { Nearbyjobs, Popularjobs, ScreenHeaderBtn, Welcome } from '../components';
 
+import Menu from '../components/home/menu/Menu';
+
 const Home = () => {
     const router = useRouter();
 
     const [searchTerm, setSearchTerm] = useState("");
+    const [menuVisible, setMenuVisible] = useState(false);
+
+    const openMenu = () => {
+        setMenuVisible(true);
+      };
+    
+      const closeMenu = () => {
+        setMenuVisible(false);
+      };
+    
+      const handleLogout = () => {
+        // Handle logout logic here
+      };
 
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.lightWhite }}>
@@ -21,11 +36,13 @@ const Home = () => {
                         <ScreenHeaderBtn iconUrl={icons.menu} dimension="60%" /> 
                         ),
                     headerRight: () => (
-                        <ScreenHeaderBtn iconUrl={images.profile} dimension="100%" /> 
+                        <ScreenHeaderBtn iconUrl={images.profile} dimension="100%" handlePress={openMenu} /> 
                         ),
                     headerTitle: "",
                 }}
             />
+
+            <Menu isVisible={menuVisible} onClose={closeMenu} onLogout={handleLogout} />
 
             <ScrollView showsVerticalScrollIndicator={false}>
                 <View style={{
