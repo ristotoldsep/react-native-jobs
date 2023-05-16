@@ -1,5 +1,7 @@
 # React Native (mobile) application for finding job ads.
 
+Used RapidAPI JSearch for data.
+
 ## Screenshots (home view, search page view, job details page)
 
 <p align="center">
